@@ -1,1 +1,29 @@
+                                              =====revisão4=====
+#include <iostream>
+#include <vector>
 
+using namespace std;
+
+int main() {
+	vector<int> vetor;
+	cout << "olá turma de algoritmos!" << endl;
+	int opçao;
+	
+	do {
+		cout << "digite o valor do elemnto" << vetor.size() + 1 ": ";
+		cin >> valor;
+		vetor.push_back(valor); 	
+	
+		cout << "deseja adiconar outro elemento? (1 - sum, 0 - nao): ";
+		cin >> opçao;
+	
+	} while (opçao == 1);
+
+
+	for (int i = 0; i < vetor.size(); i++) {
+		cout << "o valor do elemento" << i + 1 << "é: " << vetor[i] << vendl;
+	}
+	
+	return 1;
+
+}
