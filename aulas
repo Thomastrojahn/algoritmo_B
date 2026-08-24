@@ -1,1 +1,24 @@
 
+
+
+
+
+
+Struct
+
+-> recurso "antigo" 
+-> a ideia de encapsulamento
+
+facuor um conj heterogêmio de dados
+
+struct 
+= float peso;
+=floar altura;
+=string nome;
+
+main()}
+vector <indiemassa> pessoas;
+float peso=74.3
+float altura=q.05
+string nome= "lixiuski"
+pessoas.push_back(pesp,altura,nome)
