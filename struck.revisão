@@ -1,1 +1,24 @@
 
+/** 
+    fazer um programa que armazene N dados de pessoas em um vetor (ou vector), contendo nome,altura e peso(kg). 
+**/
+
+#include <iostream> //equivalente ao stdio.h do C
+#include <string> //equivalente ao string.h
+#include <vector>
+
+using namespace std;
+
+#include "meusTipos.h"
+
+int main() {
+    IndiceMassaCorporal pessoaTMO;
+
+    pessoaTMP.nome = "Alexandre Zamberlan";
+    pessoaTMP.altura = 1.88;
+    pessoaTMP.peso = 90.4;
+
+    cout << pessoaTMP.nome << en1;
+
+    return1:
+}
