@@ -1,0 +1,251 @@
+ATIVIDADE 1
+_____________MAIN_________
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   string palavra;
+   char letra;
+
+   cout << "Digite uma palavra: ";
+   cin >> palavra;
+
+   cout << "Digite uma letra: ";
+   cin >> letra;
+
+   contarLetra(palavra, letra);
+
+   return 0;
+}
+___________METODOS__________
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void contarLetra(string palavra, char letra) {
+   int contador = 0;
+
+   for (int i = 0; i < palavra.length(); i++) {
+      if (palavra[i] == letra) {
+         contador++;
+      }
+   }
+
+   cout << "A letra " << letra << " aparece " << contador << " vezes." << end
+
+   ATIVIDADE 2
+
+   ___________MAIN____________
+
+   #include <iostream>
+#include <string>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   string dia;
+   string mes;
+   string ano;
+
+   cout << "Digite o dia: ";
+   cin >> dia;
+
+   cout << "Digite o mes: ";
+   cin >> mes;
+
+   cout << "Digite o ano: ";
+   cin >> ano;
+
+   verificarData(dia, mes, ano);
+
+   return 0;
+}
+
+   ________METODOS_________
+
+   #include <iostream>
+#include <string>
+
+using namespace std;
+
+void verificarData(string dia, string mes, string ano) {
+   int d = stoi(dia);
+   int m = stoi(mes);
+   int a = stoi(ano);
+
+   if (m >= 1 && m <= 12 && d >= 1 && d <= 31 && a >= 1) {
+      cout << "DATA VALIDA" << endl;
+   } else {
+      cout << "DATA INVALIDA" << endl;
+   }
+}
+
+ATIVIDADE 3
+_________MAIN_____________
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   string frase;
+
+   cout << "Digite uma frase: ";
+   getline(cin, frase);
+
+   int quantidade = contarVogais(frase);
+
+   cout << "Quantidade de vogais: " << quantidade << endl;
+
+   return 0;
+}
+
+_____________METODOS_______________
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int contarVogais(string frase) {
+   int contador = 0;
+
+   for (int i = 0; i < frase.length(); i++) {
+      if (frase[i] == 'a' || frase[i] == 'e' || frase[i] == 'i' ||
+          frase[i] == 'o' || frase[i] == 'u') {
+         contador++;
+      }
+   }
+
+   return contador;
+}
+
+ATIVIDADE 4
+
+_____________MAIN______________
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   string frase;
+
+   cout << "Digite uma frase: ";
+   getline(cin, frase);
+
+   frase = maiuscula(frase);
+
+   cout << "Frase em maiuscula: " << frase << endl;
+
+   return 0;
+}
+
+___________METODOS__________
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string maiuscula(string frase) {
+   for (int i = 0; i < frase.length(); i++) {
+      frase[i] = toupper(frase[i]);
+   }
+
+   return frase;
+}
+
+ATIVIDADE 5
+
+_______________________MAIN__________________
+
+#include <iostream>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   int vetor[] = {1, 2, 3, 4, 5};
+   int tamanho = 5;
+
+   if (verificarOrdenado(vetor, tamanho)) {
+      cout << "Vetor ordenado." << endl;
+   } else {
+      cout << "Vetor desordenado." << endl;
+   }
+
+   return 0;
+}
+
+__________METODOS____________
+
+#include <iostream>
+
+using namespace std;
+
+bool verificarOrdenado(int vetor[], int tamanho) {
+   for (int i = 0; i < tamanho - 1; i++) {
+      if (vetor[i] > vetor[i + 1]) {
+         return false;
+      }
+   }
+
+   return true;
+}
+
+ATIVIDADE 6
+
+_________________MAIN_______________
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#include "metodos.h"
+
+int main() {
+   string nome;
+
+   cout << "Digite seu nome completo: ";
+   getline(cin, nome);
+
+   cout << "Primeiro nome: " << primeiroNome(nome) << endl;
+
+   return 0;
+}
+
+_______________METODOS_____________
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string primeiroNome(string nome) {
+   string primeiro = "";
+
+   for (int i = 0; i < nome.length(); i++) {
+      if (nome[i] == ' ') {
+         break;
+      }
+
+      primeiro += nome[i];
+   }
+
+   return primeiro;
+}
