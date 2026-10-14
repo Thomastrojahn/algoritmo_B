@@ -210,9 +210,14 @@ string nome= "lixiuski"
 pessoas.push_back(pesp,altura,nome)
 
 ============================Aula do dia 14/10/2026===================================
+
+#include <ctime>
+#include <iostream>
+#include <vector>
+
 using namespace std;
 
-void inicializarVetor(vector<int> v, int qtd, int valor) {
+void inicializarVetor(vector<int> &v, int qtd, int valor) {
     for (int i = 0; i < qtd; i++) {
         v.push_back(valor);
     }
@@ -222,10 +227,10 @@ void exibirVetor(vector<int> v) {
     for (int i = 0; i < v.size(); i++) {
         cout << v[i] << "\t";
     }
-    cout << endl;
+    cout << "\n\n";
 }
 
-void popularVetor(vector<int> v, int qtd, int inicio, int fim) {
+void popularVetor(vector<int> &v, int qtd, int inicio, int fim) {
     srand(time(NULL));
     int numero;
     for (int i = 0; i < qtd; i++) {
@@ -250,8 +255,9 @@ void estatistica(vector<int> v, int *min, int *max) {
 int main() {
     vector<int> vetor;
 
-    inicializarVetor(vetor,10,0);
+    //inicializarVetor(vetor,10,0);
     popularVetor(vetor,10,100, 500);
+    cout << "Exibindo vetor.... \n";
     exibirVetor(vetor);
 
     int min, max;
@@ -263,3 +269,30 @@ int main() {
 
     return 1;
 }
+
+    return 1;
+}
+
+->Exercícos
+
+Exercícios de fixação com métodos:
+    - retorno e sem retorno
+    - passagem de parâmetro por valor e por referência
+
+
+Use como base os códigos trabalhados:
+    - popularVetor()
+    - exibirVetor()
+
+1) construa um método chamado exercicio1 que receba como parâmetros:
+    - vetorA - com n numeros sorteados
+    - vetorB - com n numeros sorteados
+
+   e exiba os números que aparecem nos dois vetores
+
+2) construa um método chamado exercicio2 que receba como parâmetros:
+    - vetorA - com n numeros sorteados
+    - vetorB - com n numeros sorteados
+    - vetorResultado - que vai armazenar todos os números que aparecem nos dois vetores
+
+    ao final, o vetorResultado deve ter seus dados retornados.
