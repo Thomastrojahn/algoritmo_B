@@ -249,3 +249,9 @@ string primeiroNome(string nome) {
 
    return primeiro;
 }
+
+
+___________________________Exercícios dia 14/10/26_________________________________
+
+
+
