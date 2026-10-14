@@ -209,7 +209,7 @@ float altura=q.05
 string nome= "lixiuski"
 pessoas.push_back(pesp,altura,nome)
 
-============================aula do dia 14/10/2026===================================
+============================Aula do dia 14/10/2026===================================
 using namespace std;
 
 void inicializarVetor(vector<int> v, int qtd, int valor) {
